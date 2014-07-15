@@ -1,10 +1,9 @@
 <element name="display" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="display-header"> Display </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -16,16 +15,12 @@
         </li>
       </ul>
 
-      <header id="wallpaper-header">
-        <h2 data-l10n-id="wallpaper">Wallpaper</h2>
-      </header>
+      <gaia-subheader id="wallpaper-header" data-l10n-id="wallpaper" skin="organic">Wallpaper</gaia-subheader>
       <div class="wallpaper">
         <img class="wallpaper-preview" alt="wallpaper preview"/>
         <button class="wallpaper-button"></button>
       </div>
-      <header>
-        <h2 id="brightness-heading" data-l10n-id="brightness">Brightness</h2>
-      </header>
+      <gaia-subheader id="brightness-heading" data-l10n-id="brightness">Brightness</gaia-subheader>
       <ul>
         <li class="brightness-auto">
           <label class="pack-checkbox">

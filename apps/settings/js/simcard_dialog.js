@@ -37,9 +37,9 @@ function SimPinDialog(dialog) {
 
   var dialogTitle = dialog.querySelector('header h1');
   var dialogDone = dialog.querySelector('button[type="submit"]');
-  var dialogClose = dialog.querySelector('button[type="reset"]');
+  var dialogHeader = dialog.querySelector('gaia-header');
   dialogDone.onclick = verify;
-  dialogClose.onclick = skip;
+  dialogHeader.addEventListener('action', skip);
 
   // numeric inputs -- 3 possible input modes:
   //   `pin': show pin input

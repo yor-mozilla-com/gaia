@@ -1,10 +1,9 @@
 <element name="bluetooth" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="bluetooth-header"> Bluetooth </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -29,15 +28,11 @@
         </li>
       </ul>
 
-      <header id="bluetooth-paired-title">
-        <h2 data-l10n-id="bluetooth-paired-devices">Paired Devices</h2>
-      </header>
+      <gaia-subheader id="bluetooth-paired-title" data-l10n-id="bluetooth-paired-devices" skin="organic">Paired Devices</gaia-subheader>
       <ul id="bluetooth-paired-devices" class="devices">
       </ul>
 
-      <header id="bluetooth-found-title">
-        <h2 data-l10n-id="bluetooth-devices-in-area">Devices found</h2>
-      </header>
+      <gaia-subheader id="bluetooth-found-title" data-l10n-id="bluetooth-devices-in-area" skin="organic">Devices found</gaia-subheader>
       <ul id="bluetooth-devices" class="devices">
       </ul>
       <div id="bluetooth-searching" data-l10n-id="search-for-device" class="explanation">

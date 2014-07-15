@@ -1,10 +1,9 @@
 <element name="languages" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="language-header"> Language </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -32,9 +31,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="sample-format">Sample Format</h2>
-      </header>
+      <gaia-subheader data-l10n-id="sample-format">Sample Format</gaia-subheader>
       <ul>
         <li class="description">
           <p id="region-date">Friday, September 28 2012</p>

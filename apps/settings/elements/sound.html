@@ -1,10 +1,9 @@
 <element name="sound" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="sound-header"> Sound </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -16,9 +15,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="volume">Volume</h2>
-      </header>
+      <gaia-subheader data-l10n-id="volume" skin="organic">Volume</gaia-subheader>
       <ul>
         <li class="sound-setting">
           <label class="range-icons volume media">
@@ -40,9 +37,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="tones">Tones</h2>
-      </header>
+      <gaia-subheader data-l10n-id="tones" skin="organic">Tones</gaia-subheader>
       <ul>
         <li id="ringer" hidden>
           <p data-l10n-id="ringer">Ringer</p>
@@ -63,18 +58,14 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="manage-sounds">Manage Sounds</h2>
-      </header>
+      <gaia-subheader data-l10n-id="manage-sounds" skin="organic">Manage Sounds</gaia-subheader>
       <ul>
         <li id="manage-ringtones">
           <button id="manage-ringtones-button" class="icon icon-view" data-l10n-id="manage-ringtones"></button>
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="other-sounds">Other Sounds</h2>
-      </header>
+      <gaia-subheader data-l10n-id="other-sounds" skin="organic">Other Sounds</gaia-subheader>
       <ul>
         <li>
           <label class="pack-checkbox">

@@ -1,10 +1,9 @@
 <element name="call" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="callSettings-header"> Call Settings </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -43,9 +42,7 @@
         </li>
       </ul>
 
-      <header id="header-callForwarding" hidden>
-        <h2 data-l10n-id="callForwarding"> Call Forwarding </h2>
-      </header>
+      <gaia-subheader id="header-callForwarding" data-l10n-id="callForwarding" skin="organic" hidden> Call Forwarding </gaia-subheader>
       <ul id="list-callForwarding" hidden>
         <li id="fdnSettingsBlocked" class="description" hidden>
           <p data-l10n-id="fdn-enabled-warning">

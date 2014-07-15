@@ -1,10 +1,9 @@
 <element name="wifi" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="wifi-header"> Wi-Fi </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -27,9 +26,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="availableNetworks"> Available Networks </h2>
-      </header>
+      <gaia-subheader data-l10n-id="availableNetworks" skin="organic"> Available Networks </gaia-subheader>
       <ul id="wifi-availableNetworks" data-state="off">
         <li class="explanation" data-state="off" data-l10n-id="wifi-disabled">
           Turn Wi-Fi on to view available networks.
@@ -42,9 +39,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="advancedSettings"> Advanced Settings </h2>
-      </header>
+      <gaia-subheader data-l10n-id="advancedSettings" skin="organic"> Advanced Settings </gaia-subheader>
       <ul>
         <li>
           <button id="manageNetworks"

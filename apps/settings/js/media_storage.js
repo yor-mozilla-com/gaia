@@ -29,9 +29,9 @@ require([
   // This function will create a view for each volume under #volume-list,
   // the DOM structure looks like:
   //
-  //<header>
-  //  <h2 data-l10n-id="storage-name-internal">Internal Storage</h2>
-  //</header>
+  //<gaia-subheader data-l10n-id="storage-name-internal" skin="organic">
+  //  Internal Storage
+  //</gaia-subheader>
   //<ul>
   //  <li>
   //    <div id="sdcard-space-stackedbar" class="space-stackedbar">
@@ -97,13 +97,12 @@ require([
     var l10nId, li, label, text, size;
 
     // create header
-    var h2 = document.createElement('h2');
+    var subheader = document.createElement('gaia-subheader');
     l10nId = this.getL10nId();
-    h2.dataset.l10nId = l10nId;
-    h2.textContent = _(l10nId);
-    var header = document.createElement('header');
-    header.appendChild(h2);
-    listRoot.appendChild(header);
+    subheader.dataset.l10nId = l10nId;
+    subheader.textContent = _(l10nId);
+    subheader.setAttribute('skin', 'organic');
+    listRoot.appendChild(subheader);
     // create ul
     this.rootElement = document.createElement('ul');
     listRoot.appendChild(this.rootElement);

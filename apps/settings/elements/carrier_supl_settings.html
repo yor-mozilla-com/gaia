@@ -1,13 +1,10 @@
 <element name="carrier-suplSettings" extends="section">
   <template>
 
-    <header>
-      <button type="reset"><span data-l10n-id="back" class="icon icon-back">Back</span></button>
-      <menu type="toolbar">
-        <button type="submit"><span data-l10n-id="ok">OK</span></button>
-      </menu>
+    <gaia-header action="back" skin="organic">
       <h1 data-l10n-id="suplSettings-header"> A-GPS Settings </h1>
-    </header>
+      <button type="submit"><span data-l10n-id="ok">OK</span></button>
+    </gaia-header>
 
     <div>
       <ul class="apnSettings-list">
@@ -19,9 +16,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="advancedSettings"> Advanced Settings </h2>
-      </header>
+      <gaia-subheader data-l10n-id="advancedSettings" skin="organic"> Advanced Settings </gaia-subheader>
       <ul class="apnSettings-advanced">
         <li hidden>
           <input type="text" x-inputmode="verbatim" id="ril.supl.carrier" dir="auto" />

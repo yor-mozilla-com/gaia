@@ -1,10 +1,9 @@
 <element name="findmydevice" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="findmydevice"> Find My Device </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <div id="findmydevice-signin" hidden>
@@ -39,9 +38,7 @@
           </li>
         </ul>
 
-        <header>
-          <h2 data-l10n-id="findmydevice-about">About Find My Device</h2>
-        </header>
+        <gaia-subheader data-l10n-id="findmydevice-about" skin="organic">About Find My Device</gaia-subheader>
         <ul>
           <li class="description">
             <p>

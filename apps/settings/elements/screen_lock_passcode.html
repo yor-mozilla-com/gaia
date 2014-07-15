@@ -1,19 +1,14 @@
 <element name="screenLock-passcode" extends="section">
   <template>
 
-    <header>
-      <a href="#screenLock"><span class="icon icon-back">back</span></a>
-      <menu type="toolbar" data-mode="new">
-        <button class="passcode-change" data-l10n-id="change">Change</button>
-      </menu>
-      <menu type="toolbar" data-mode="create">
-        <button class="passcode-create" data-l10n-id="create">Create</button>
-      </menu>
+    <gaia-header data-action-href="#screenLock" action="back" skin="organic">
+      <button class="passcode-change" data-l10n-id="change" data-mode="new">Change</button>
+      <button class="passcode-create" data-l10n-id="create" data-mode="create">Create</button>
       <h1 data-l10n-id="passcode-heading" data-mode="create">Passcode</h1>
       <h1 data-l10n-id="current-passcode" data-mode="edit">Current Passcode</h1>
       <h1 data-l10n-id="new-passcode" data-mode="new">New Passcode</h1>
       <h1 data-l10n-id="enter-passcode" data-mode="confirm,confirmLock">Enter Passcode</h1>
-    </header>
+    </gaia-header>
 
     <div class="passcode-overlay">
       <input type="number" x-inputmode="digit" class="passcode-input" />

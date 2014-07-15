@@ -1,18 +1,13 @@
 <element name="homescreens-details" extends="section">
   <template>
 
-    <header>
-      <a href="#homescreens"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#homescreens" action="back" skin="organic">
       <h1> </h1>
-    </header>
+    </gaia-header>
     <div>
-      <header>
-        <h2 class="description" data-l10n-id="description">Description</h2>
-      </header>
+      <gaia-subheader class="description" data-l10n-id="description" skin="organic">Description</gaia-subheader>
       <p></p>
-      <header>
-        <h2 data-l10n-id="changeHomescreen">Change Homescreen</h2>
-      </header>
+      <gaia-subheader data-l10n-id="changeHomescreen" skin="organic">Change Homescreen</gaia-subheader>
       <button id="change-homescreen" data-l10n-id="changeHomescreenButton">Change</button>
     </div>
 

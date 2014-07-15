@@ -1,10 +1,9 @@
 <element name="about" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="deviceInfo-header"> Device Information </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -30,9 +29,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="softwareUpdates"> Software Updates </h2>
-      </header>
+      <gaia-subheader data-l10n-id="softwareUpdates" skin="organic"> Software Updates </gaia-subheader>
       <ul>
         <li>
           <p data-l10n-id="check-for-updates">Check for Updates</p>
@@ -57,9 +54,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="aboutBrowserOS"> About Browser OS </h2>
-      </header>
+      <gaia-subheader data-l10n-id="aboutBrowserOS" skin="organic"> About Browser OS </gaia-subheader>
       <ul>
         <li class="description">
           <p data-l10n-id="browser-os-desc">

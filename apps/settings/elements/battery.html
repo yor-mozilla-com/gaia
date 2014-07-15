@@ -1,10 +1,9 @@
 <element name="battery" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="battery-header"> Battery </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -15,9 +14,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="powerSaveMode">Power Save Mode</h2>
-      </header>
+      <gaia-subheader data-l10n-id="powerSaveMode" skin="organic">Power Save Mode</gaia-subheader>
       <ul>
         <li>
           <label class="pack-switch">

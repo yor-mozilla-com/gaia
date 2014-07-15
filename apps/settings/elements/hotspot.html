@@ -1,15 +1,12 @@
 <element name="hotspot" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="internetSharing-header"> Internet Sharing </h1>
-    </header>
+    </gaia-header>
 
     <div>
-      <header>
-        <h2 data-l10n-id="internetSharing-wifi"> Wi-Fi </h2>
-      </header>
+      <gaia-subheader data-l10n-id="internetSharing-wifi" skin="organic"> Wi-Fi </gaia-subheader>
       <ul>
         <li>
           <label class="pack-switch">
@@ -38,9 +35,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="internetSharing-usb"> USB </h2>
-      </header>
+      <gaia-subheader data-l10n-id="internetSharing-usb" skin="organic"> USB </gaia-subheader >
       <ul>
         <li>
           <label class="pack-switch">

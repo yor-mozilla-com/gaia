@@ -14,18 +14,18 @@ define(function(require) {
 
     function bindEvents(doms) {
       doms.uninstallButton.addEventListener('click', uninstall);
-      doms.back.addEventListener('click', back);
+      doms.back.addEventListener('action', back);
     }
 
     function unbindEvents(doms) {
       doms.uninstallButton.removeEventListener('click', uninstall);
-      doms.back.removeEventListener('click', back);
+      doms.back.removeEventListener('action', back);
     }
 
     return SettingsPanel({
       onInit: function(panel, options) {
         elements = {
-          back: panel.querySelector('.app-permissions-back'),
+          back: panel.querySelector('#appPermissions-details-header'),
           uninstallButton: panel.querySelector('.uninstall-app'),
           list: panel.querySelector('.permissionsListHeader + ul'),
           header: panel.querySelector('.permissionsListHeader'),
@@ -34,7 +34,7 @@ define(function(require) {
           developerInfos: panel.querySelector('.developer-infos'),
           developerHeader: panel.querySelector('.developer-header'),
           detailTitle:
-            panel.querySelector('.app-permissions-back + h1')
+            panel.querySelector('#appPermissions-details-header > h1')
         };
         permissionDetailModule.init(elements, options.permissionsTable);
       },

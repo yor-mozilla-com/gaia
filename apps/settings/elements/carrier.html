@@ -1,10 +1,9 @@
 <element name="carrier" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="cellularAndData-header"> Cellular &amp; Data </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -14,9 +13,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="dataConnectivity"> Data Connectivity </h2>
-      </header>
+      <gaia-subheader data-l10n-id="dataConnectivity" skin="organic"> Data Connectivity </gaia-subheader>
       <ul>
         <li id="menuItem-enableDataCall" aria-disabled="true">
           <label class="pack-switch">
@@ -35,9 +32,7 @@
         <li id="dataRoaming-expl" class="explanation" data-l10n-id="dataRoaming-warning-message" hidden></li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="advancedSettings"> Advanced Settings </h2>
-      </header>
+      <gaia-subheader data-l10n-id="advancedSettings" skin="organic"> Advanced Settings </gaia-subheader>
       <ul>
         <li>
           <button class="icon icon-view" data-href="#carrier-operatorSettings"

@@ -1,10 +1,9 @@
 <element name="doNotTrack" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="doNotTrack-header"> Do Not Track </h1>
-    </header>
+    </gaia-header>
 
     <div>
       <ul>
@@ -27,9 +26,7 @@
           </label>
         </li>
       </ul>
-      <header>
-        <h2 data-l10n-id="doNotTrack-dt">How does Do Not Track work?</h2>
-      </header>
+      <gaia-subheader data-l10n-id="doNotTrack-dt" skin="organic">How does Do Not Track work?</gaia-subheader>
       <ul>
         <li class="description">
           <p data-l10n-id="doNotTrack-dd1">

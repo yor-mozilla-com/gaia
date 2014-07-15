@@ -23,9 +23,7 @@
   var iccStkList = document.getElementById('icc-stk-list');
   var iccStkHeader = document.getElementById('icc-stk-header');
   var iccStkSubheader = document.getElementById('icc-stk-subheader');
-  var exitHelp = document.getElementById('icc-stk-help-exit');
-  var backButton = document.getElementById('icc-stk-app-back');
-  var exitButton = document.getElementById('icc-stk-exit');
+  var header = document.getElementById('icc-header');
   var stkOpenAppName = null;
   var stkLastSelectedText = null;
   var goBackTimer = {
@@ -125,23 +123,10 @@
    * Updates the STK header buttons
    */
   function setSTKScreenType(type) {
-    switch (type) {
-      case STK_SCREEN_MAINMENU:
-        exitButton.classList.remove('hidden');
-        backButton.classList.add('hidden');
-        exitHelp.classList.add('hidden');
-        break;
-
-      case STK_SCREEN_HELP:
-        exitButton.classList.add('hidden');
-        backButton.classList.add('hidden');
-        exitHelp.classList.remove('hidden');
-        break;
-
-      default:  // STK_SCREEN_DEFAULT
-        exitButton.classList.add('hidden');
-        backButton.classList.remove('hidden');
-        exitHelp.classList.add('hidden');
+    if (type !=== STK_SCREEN_MAINMENU && type !=== STK_SCREEN_HELP) {
+      header.addEventListener('action', function() {
+        Settings.currentPanel = '#root';
+      });
     }
   }
 
@@ -173,9 +158,9 @@
         addCloseNotificationsEvents(message);
         updateSelection(message);
         Settings.currentPanel = '#icc';
-        backButton.onclick = function _back() {
+        header.addEventListener('action', function _back() {
           stkResGoBack(message);
-        };
+        });
         break;
 
       default:
@@ -273,9 +258,9 @@
       }));
     });
 
-    exitHelp.onclick = function _closeHelp() {
+    header.addEventListener('action', function _closeHelp() {
       updateMenu(menu);
-    };
+    });
   }
 
   function onMainMenuHelpItemClick(event) {

@@ -14,8 +14,12 @@ require(['config/require'], function() {
     require('shared/icc_helper');
     // used by all header building blocks
     require('shared/font_size_utils');
+<<<<<<< HEAD
 
     var SettingsUtils = require('modules/settings_utils');
+=======
+    
+>>>>>>> Bug 1015297 - [Settings] Update to use gaia-header
     var SettingsService = require('modules/settings_service');
     var PageTransitions = require('modules/page_transitions');
     var LazyLoader = require('shared/lazy_loader');

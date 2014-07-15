@@ -14,6 +14,13 @@ define(function(require) {
     var LazyLoader = require('shared/lazy_loader');
     var Settings = require('settings');
 
+    var _parentPanels = {
+      'about': 'root',
+      'about-legal': 'about',
+      'about-licensing': 'about-legal',
+      'about-source-code': 'about-legal'
+    };
+    
     var _rootPanelId = null;
     /**
      * _currentNavigation caches information of the current panel including id,
@@ -77,6 +84,21 @@ define(function(require) {
       return promise;
     };
 
+    var _registerHeaderListener = function ss_registerHeaderListener(panelId) {
+      var panel = document.getElementById(panelId);
+      var headers = panel.querySelectorAll("gaia-header[data-action-href]");
+      var len = headers.length;
+      for (var i = 0; i < len; i++) {
+        var href = headers[i].dataset.actionHref;
+        headers[i].addEventListener(
+          'action', function() {
+            Settings.currentPanel = href;
+          }
+        );
+      }
+    };
+
+
     var _loadPanel = function ss_loadPanel(panelId, callback) {
       var panelElement = document.getElementById(panelId);
       if (panelElement.dataset.rendered) { // already initialized
@@ -98,6 +120,8 @@ define(function(require) {
       } else {
         LazyLoader.load([panelElement], callback);
       }
+      
+      _registerHeaderListener(panelId);
     };
 
     var _onVisibilityChange = function ss_onVisibilityChange() {

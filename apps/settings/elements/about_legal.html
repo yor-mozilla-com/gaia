@@ -1,17 +1,12 @@
 <element name="about-legal" extends="section">
   <template>
 
-    <header>
-      <a href="#about">
-        <span class="icon icon-back">back</span>
-      </a>
+    <gaia-header data-action-href="#about" action="back" skin="organic">
       <h1 data-l10n-id="about-legal-info-header"> Legal Information </h1>
-    </header>
+    </gaia-header>
 
     <div>
-      <header>
-        <h2 data-l10n-id="about-mozilla"> Mozilla </h2>
-      </header>
+      <gaia-subheader data-l10n-id="about-mozilla" skin="organic"> Mozilla </gaia-subheader>
       <ul>
         <li>
           <a href="#about-licensing" data-l10n-id="open-source-notices">
@@ -25,9 +20,7 @@
         </li>
       </ul>
 
-      <header hidden>
-        <h2 data-l10n-id="about-other"> Other </h2>
-      </header>
+      <gaia-subheader data-l10n-id="about-other" skin="organic" hidden> Other </gaia-subheader>
     </div>
 
   </template>

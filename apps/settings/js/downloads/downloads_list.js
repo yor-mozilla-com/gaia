@@ -411,7 +411,7 @@
         downloadsEditMenu = document.getElementById('downloads-edit-menu');
         // Buttons
         editButton = document.getElementById('downloads-edit-button');
-        closeButton = document.getElementById('downloads-close-button');
+        editModeHeader = document.getElementById('edit-mode-header');
         deleteButton = document.getElementById('downloads-delete-button');
         selectAllButton =
           document.getElementById('downloads-edit-select-all');
@@ -434,7 +434,7 @@
 
         // Add listener to edit mode
         editButton.addEventListener('click', _loadEditMode.bind(this));
-        closeButton.addEventListener('click', _closeEditMode.bind(this));
+        editModeHeader.addEventListener('action', _closeEditMode.bind(this));
         selectAllButton.addEventListener('click', _enableAllChecks.bind(this));
         deselectAllButton.addEventListener('click',
           _disableAllChecks.bind(this));

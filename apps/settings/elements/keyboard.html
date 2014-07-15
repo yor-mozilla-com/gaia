@@ -1,20 +1,15 @@
 <element name="keyboard" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="keyboards-header"> Keyboards </h1>
-    </header>
+    </gaia-header>
 
     <div>
-      <header>
-        <h2 data-l10n-id="keyboardSettings">Keyboard Settings</h2>
-      </header>
+      <gaia-subheader data-l10n-id="keyboardSettings" skin="organic">Keyboard Settings</gaia-header>
       <ul class="allKeyboardList" hidden>
       </ul>
-      <header>
-        <h2 data-l10n-id="selectedKeyboards">Selected Keyboards</h2>
-      </header>
+      <gaia-subheader data-l10n-id="selectedKeyboards" skin="organic">Selected Keyboards</gaia-subheader>
       <ul class="enabledKeyboardList">
       </ul>
       <ul>

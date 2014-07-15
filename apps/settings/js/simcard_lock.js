@@ -46,11 +46,15 @@
       //
       // In this way, we have to make sure users can go back to the
       // right panel.
+      var href;
       if (this.isSingleSim()) {
-        this.simPinBackButton.setAttribute('href', '#root');
+        href = '#root';
       } else {
-        this.simPinBackButton.setAttribute('href', '#sim-manager');
+        href = '#sim-manager';
       }
+      this.simPinBackButton.addEventListener('action', function() {
+        Settings.currentPanel = href;
+      });
     },
     initSimPinsUI: function() {
       var simPinHTMLs = [];
@@ -202,7 +206,7 @@
       this.dialog = document.getElementById('simpin-dialog');
       this.simPinTmpl = document.getElementById('simpin-tmpl');
       this.simPinContainer = document.getElementById('simpin-container');
-      this.simPinBackButton = document.getElementById('simpin-back');
+      this.simPinBackButton = document.getElementById('simpin-header');
       this.simSecurityDesc = document.getElementById('simCardLock-desc');
     },
     addIccDetectedEvent: function() {

@@ -1,14 +1,11 @@
 <element name="sim-manager" extends="section">
   <template>
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="simManager-header">SIM manager</h1>
-    </header>
+    </gaia-header>
     <div>
       <ul id="sim-card-container"></ul>
-      <header>
-        <h2 data-l10n-id="simSettings">SIM settings</h2>
-      </header>
+      <gaia-subheader data-l10n-id="simSettings" skin="organic">SIM settings</gaia-subheader>
       <ul class="sim-manager-select-list">
         <li data-href="#simpin" id="sim-manager-security-entry">
           <small id="sim-manager-security-desc"></small>

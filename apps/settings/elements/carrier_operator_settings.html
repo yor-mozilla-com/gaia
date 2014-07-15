@@ -1,10 +1,9 @@
 <element name="carrier-operatorSettings" extends="section">
   <template>
 
-    <header>
-      <a href="#carrier"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#carrier" action="back" skin="organic">
       <h1 data-l10n-id="networkOperator-header"> Network Operator </h1>
-    </header>
+    </gaia-header>
 
     <div id="carrier-operatorSettings-content">
       <ul>
@@ -33,9 +32,7 @@
         </li>
       </ul>
 
-      <header id="availableOperatorsHeader" hidden>
-        <h2 data-l10n-id="availableOperators"> Network Operators in the Area </h2>
-      </header>
+      <gaia-subheader id="availableOperatorsHeader" data-l10n-id="availableOperators" skin="organic" hidden> Network Operators in the Area </gaia-subheader>
       <ul id="availableOperators" data-state="off" hidden>
         <li class="explanation" data-state="off" data-l10n-id="operator-turnAutoSelectOff">
           Turn Automatic Selection off to view available network operators.

@@ -6,6 +6,7 @@
 var About = {
   init: function about_init() {
     document.getElementById('check-update-now').onclick = this.checkForUpdates;
+
     this.loadHardwareInfo();
     this.loadLastUpdated();
     this.networkStatus();

@@ -57,13 +57,21 @@ function openDialog(dialogID, onSubmit, onReset) {
     };
   }
 
-  var reset = dialog.querySelector('[type=reset]');
+//  var reset = dialog.querySelector('[type=reset]');
+//  if (reset) {
+//    reset.onclick = function onreset() {
+//      if (typeof onReset === 'function')
+//        (onReset.bind(dialog))();
+//      Settings.currentPanel = origin; // hide dialog box
+//    };
+//  }
+  var reset = dialog.querySelector('gaia-header');
   if (reset) {
-    reset.onclick = function onreset() {
+    reset.addEventListener('action', function() {
       if (typeof onReset === 'function')
         (onReset.bind(dialog))();
       Settings.currentPanel = origin; // hide dialog box
-    };
+    });
   }
 }
 

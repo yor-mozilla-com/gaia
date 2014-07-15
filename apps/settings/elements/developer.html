@@ -1,15 +1,12 @@
 <element name="developer" extends="section">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">Back</span></a>
+    <gaia-header data-action-href="#root" action="back" skin="organic">
       <h1 data-l10n-id="developer-header">Developer</h1>
-    </header>
+    </gaia-header>
 
     <div>
-      <header>
-        <h2 data-l10n-id="developer-tools">Developer Tools</h2>
-      </header>
+      <gaia-subheader data-l10n-id="developer-tools" skin="organic">Developer Tools</gaia-subheader>
       <ul>
         <li>
           <p data-l10n-id="remote-debugging-usb">Debugging via USB</p>
@@ -31,9 +28,7 @@
           <button class="icon icon-view" data-href="#developer-hud" data-l10n-id="hud-button">Developer HUD</button>
         </li>
       </ul>
-      <header>
-        <h2 data-l10n-id="graphics">Graphics</h2>
-      </header>
+      <gaia-subheader data-l10n-id="graphics" skin="organic">Graphics</gaia-subheader>
       <ul>
         <li>
           <label class="pack-checkbox">
@@ -95,9 +90,7 @@
           </label>
         </li>
       </ul>
-      <header>
-        <h2 data-l10n-id="window-management">Window Management</h2>
-      </header>
+      <gaia-subheader data-l10n-id="window-management" skin="organic">Window Management</gaia-subheader>
       <ul>
         <li id="software-home-button">
           <label class="pack-checkbox">
@@ -130,9 +123,7 @@
           </label>
         </li>
       </ul>
-      <header>
-        <h2 data-l10n-id="debug">Debug</h2>
-      </header>
+      <gaia-subheader data-l10n-id="debug" skin="organic">Debug</gaia-subheader>
       <ul>
         <li>
           <label class="pack-checkbox">
@@ -186,9 +177,7 @@
           <button id="ftuLauncher" data-l10n-id="launch-ftu">Launch First Time Use</button>
         </li>
       </ul>
-      <header>
-        <h2 data-l10n-id="softwareUpdates">Software updates</h2>
-      </header>
+      <gaia-subheader data-l10n-id="softwareUpdates" skin="organic">Software updates</gaia-subheader>
       <ul>
         <li>
           <p data-l10n-id="update-channel">Update Channel</p>

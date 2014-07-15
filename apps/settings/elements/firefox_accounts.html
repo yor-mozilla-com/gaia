@@ -1,10 +1,9 @@
 <element name="fxa" extends="section" id="fxa-container">
   <template>
 
-    <header>
-      <a href="#root"><span class="icon icon-back">back</span></a>
+    <gaia-header data-action-href="#root"  action="back" skin="organic">
       <h1 data-l10n-id="fxa-accounts-header">Firefox Accounts</h1>
-    </header>
+    </gaia-header>
 
     <div id="fxa-logged-out" hidden>
       <ul>
@@ -25,9 +24,7 @@
       </ul>
     </div>
     <div id="fxa-unverified" hidden>
-      <header>
-        <h2 data-l10n-id="fxa-confirm-account">Confirm Your Account</h2>
-      </header>
+      <gaia-subheader data-l10n-id="fxa-confirm-account" skin="organic">Confirm Your Account</gaia-subheader>
       <ul>
         <li class="description">
           <p data-l10n-id="fxa-verification-email-sent-msg" id="fxa-unverified-text">
@@ -50,9 +47,7 @@
       </ul>
     </div>
     <div id="fxa-logged-in" hidden>
-      <header>
-        <h2 data-l10n-id="fxa-about">About</h2>
-      </header>
+      <gaia-subheader data-l10n-id="fxa-about">About</gaia-subheader>
       <ul>
         <li class="description">
           <p data-l10n-id="fxa-overview">
@@ -65,9 +60,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="fxa-signed-in-header">Signed In</h2>
-      </header>
+      <gaia-subheader data-l10n-id="fxa-signed-in-header" skin="organic">Signed In</gaia-subheader>
       <ul>
         <li>
           <span data-l10n-id="fxa-marketplace-app">Marketplace</span>
@@ -77,9 +70,7 @@
         </li>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="fxa-options">Options</h2>
-      </header>
+      <gaia-subheader data-l10n-id="fxa-options" skin="organic">Options</gaia-subheader>
       <ul>
         <li>
           <label>

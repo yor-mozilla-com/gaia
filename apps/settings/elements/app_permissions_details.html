@@ -1,15 +1,12 @@
 <element name="appPermissions-details" extends="section">
   <template>
 
-    <header>
-      <a class="app-permissions-back"><span class="icon icon-back">back</span></a>
+    <gaia-header id="appPermissions-details-header" action="back" skin="organic">
       <h1> </h1>
-    </header>
+    </gaia-header>
 
     <div>
-      <header id="developer-header" class="developer-header">
-        <h2 data-l10n-id="author">Author</h2>
-      </header>
+      <gaia-subheader id="developer-header" class="developer-header" data-l10n-id="author" skin="organic">Author</gaia-subheader>
       <ul>
         <li id="developer-infos" class="developer-infos">
           <small><a target="_blank" href="http://github.com/mozilla-b2g/gaia/" data-href="http://github.com/mozilla-b2g/gaia/">http://github.com/mozilla-b2g/gaia/</a></small>
@@ -17,15 +14,11 @@
         </li>
       </ul>
 
-      <header id="permissionsListHeader" class="permissionsListHeader">
-        <h2 data-l10n-id="permissions">Permissions</h2>
-      </header>
+      <gaia-subheader id="permissionsListHeader" class="permissionsListHeader" data-l10n-id="permissions" skin="organic">Permissions</gaia-subheader>
       <ul>
       </ul>
 
-      <header>
-        <h2 data-l10n-id="uninstallApp">Uninstall App</h2>
-      </header>
+      <gaia-subheader data-l10n-id="uninstallApp" skin="organic">Uninstall App</gaia-subheader>
       <button id="uninstall-app" data-l10n-id="uninstallApp" class="uninstall-app danger">Uninstall App</button>
     </div>
 
